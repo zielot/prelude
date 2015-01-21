@@ -74,8 +74,9 @@ Will only occur if prelude-whitespace is also enabled."
 ;; indentation width -- eg. c-basic-offset: use that to adjust your
 ;; personal indentation width, while maintaining the style (and
 ;; meaning) of any files you load.
-(setq-default indent-tabs-mode nil)   ;; don't use tabs to indent
-(setq-default tab-width 8)            ;; but maintain correct appearance
+(setq-default indent-tabs-mode t)   ;; *DO* use tabs to indent
+(setq-default tab-width 4)          ;; but maintain correct appearance
+                                    ;; .. which is 4 spaces
 
 ;; delete the selection with a keypress
 (delete-selection-mode t)
@@ -102,16 +103,16 @@ Will only occur if prelude-whitespace is also enabled."
                                          try-complete-lisp-symbol))
 
 ;; smart tab behavior - indent or complete
-(setq tab-always-indent 'complete)
+; (setq tab-always-indent 'complete)
 
 ;; smart pairing for all
-(require 'smartparens-config)
-(setq sp-base-key-bindings 'paredit)
-(setq sp-autoskip-closing-pair 'always)
-(setq sp-hybrid-kill-entire-symbol nil)
-(sp-use-paredit-bindings)
+;; (require 'smartparens-config)
+;; (setq sp-base-key-bindings 'paredit)
+;; (setq sp-autoskip-closing-pair 'always)
+;; (setq sp-hybrid-kill-entire-symbol nil)
+;; (sp-use-paredit-bindings)
 
-(show-smartparens-global-mode +1)
+;; (show-smartparens-global-mode +1)
 
 (define-key prog-mode-map (kbd "M-(") (prelude-wrap-with "("))
 ;; FIXME: pick terminal friendly binding
@@ -119,7 +120,7 @@ Will only occur if prelude-whitespace is also enabled."
 (define-key prog-mode-map (kbd "M-\"") (prelude-wrap-with "\""))
 
 ;; disable annoying blink-matching-paren
-(setq blink-matching-paren nil)
+;; (setq blink-matching-paren nil)
 
 ;; diminish keeps the modeline tidy
 (require 'diminish)
@@ -382,9 +383,9 @@ indent yanked text (with prefix arg don't indent)."
 ;; enable Prelude's keybindings
 (prelude-global-mode t)
 
-;; sensible undo
-(global-undo-tree-mode)
-(diminish 'undo-tree-mode)
+;; non-sensible undo
+;; (global-undo-tree-mode)
+;; (diminish 'undo-tree-mode)
 
 ;; enable winner-mode to manage window configurations
 (winner-mode +1)

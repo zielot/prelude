@@ -20,3 +20,5 @@ personal/
 projectile-bookmarks.eld
 session*
 .cask
+tramp
+.emacs.desktop*

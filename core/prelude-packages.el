@@ -65,7 +65,7 @@
     move-text
     rainbow-mode
     smartparens
-    undo-tree
+    ;; undo-tree
     volatile-highlights
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")
