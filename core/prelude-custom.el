@@ -43,7 +43,7 @@
   :type 'boolean
   :group 'prelude)
 
-(defcustom prelude-guru t
+(defcustom prelude-guru nil
   "Non-nil values enable `guru-mode'."
   :type 'boolean
   :group 'prelude)
@@ -93,10 +93,10 @@ Only modes that don't derive from `prog-mode' should be listed here."
   :type 'number
   :group 'prelude)
 
-(defcustom prelude-theme 'zenburn
-  "The default color theme, change this in your /personal/preload config."
-  :type 'symbol
-  :group 'prelude)
+;; (defcustom prelude-theme 'zenburn
+;;   "The default color theme, change this in your /personal/preload config."
+;;   :type 'symbol
+;;   :group 'prelude)
 
 (provide 'prelude-custom)
 
