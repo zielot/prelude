@@ -1,6 +1,6 @@
 ;;; prelude-ui.el --- Emacs Prelude: UI optimizations and tweaks.
 ;;
-;; Copyright © 2011-2014 Bozhidar Batsov
+;; Copyright © 2011-2015 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
@@ -70,5 +70,8 @@
 ;; use zenburn as the default theme
 ;; (load-theme prelude-theme t)
 
+(require 'smart-mode-line)
+(setq sml/theme nil)
+(add-hook 'after-init-hook #'sml/setup)
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here
